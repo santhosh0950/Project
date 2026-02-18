@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natural Farming | Sustainable Agriculture</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#e8f5e9,#c8e6c9);
+    color:#1b5e20;
+}
+
+/* Navigation */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#1b5e20;
+    padding:15px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+nav h2{
+    color:white;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#a5d6a7;
+}
+
+/* Sections */
+section{
+    display:none;
+    padding:120px 10%;
+    min-height:100vh;
+    animation:fade 0.4s ease-in-out;
+}
+
+section.active{
+    display:block;
+}
+
+@keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+h1{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+/* Hero */
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#2e7d32;
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#145a1a;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+/* 3:4 Image Style */
+.image-box{
+    width:100%;
+    aspect-ratio:3/4;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.image-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Gallery */
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.gallery-item{
+    aspect-ratio:3/4;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+/* Contact */
+form{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:12px;
+    border:none;
+    background:#2e7d32;
+    color:white;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+button:hover{
+    background:#145a1a;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1b5e20;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Natural Farming</h2>
+    <ul>
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('about')">About</a></li>
+        <li><a href="#" onclick="showPage('practices')">Practices</a></li>
+        <li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
+        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active">
+    <div class="hero">
+        <h1>Welcome to Natural Farming</h1>
+        <p>Growing food in harmony with nature for a greener and healthier future.</p>
+        <a href="#" class="btn" onclick="showPage('gallery')">Explore Gallery</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h1>About Natural Farming</h1>
+    <p>
+        Natural farming avoids synthetic chemicals and focuses on soil regeneration,
+        biodiversity, and sustainable agricultural practices.
+    </p>
+</section>
+
+<!-- PRACTICES -->
+<section id="practices">
+    <h1>Natural Farming Practices</h1>
+
+    <div class="cards">
+        <div class="card">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1598514982295-5d4c56fcb8c5" alt="">
+            </div>
+            <h3>Mulching</h3>
+            <p>Retains soil moisture and prevents weed growth naturally.</p>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1589927986089-35812388d1d4" alt="">
+            </div>
+            <h3>Composting</h3>
+            <p>Enriches soil fertility using organic waste materials.</p>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399" alt="">
+            </div>
+            <h3>Crop Rotation</h3>
+            <p>Maintains nutrient balance and improves soil health.</p>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="">
+            </div>
+            <h3>Natural Pest Control</h3>
+            <p>Uses neem and biological solutions for safe pest control.</p>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <h1>Farming Gallery</h1>
+
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="your-image1.jpg" alt=""></div>
+        <div class="gallery-item"><img src="your-image2.jpg" alt=""></div>
+        <div class="gallery-item"><img src="your-image3.jpg" alt=""></div>
+        <div class="gallery-item"><img src="your-image4.jpg" alt=""></div>
+        <div class="gallery-item"><img src="your-image5.jpg" alt=""></div>
+        <div class="gallery-item"><img src="your-image6.jpg" alt=""></div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h1>Contact Us</h1>
+
+    <form onsubmit="event.preventDefault(); alert('Thank you for contacting us!');">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Natural Farming | Sustainable Agriculture
+</footer>
+
+<script>
+function showPage(pageId){
+    let sections = document.querySelectorAll("section");
+    sections.forEach(section => section.classList.remove("active"));
+    document.getElementById(pageId).classList.add("active");
+    window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
