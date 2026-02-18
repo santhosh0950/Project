@@ -46,6 +46,7 @@ color:white;
 text-decoration:none;
 font-weight:600;
 transition:0.3s;
+cursor:pointer;
 }
 
 nav ul li a:hover{
@@ -140,6 +141,35 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 line-height:1.7;
 }
 
+/* CONTACT FORM */
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+form input, form textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+form button{
+padding:12px;
+border:none;
+border-radius:8px;
+background:#0b3d0b;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+form button:hover{
+background:#145214;
+}
+
 /* FOOTER */
 footer{
 background:#0b3d0b;
@@ -160,11 +190,12 @@ h2{font-size:24px;}
 
 <nav>
 <ul>
-<li><a href="#" onclick="showPage('home')">Home</a></li>
-<li><a href="#" onclick="showPage('practices')">Practices</a></li>
-<li><a href="#" onclick="showPage('gallery')">Gallery</a></li>
-<li><a href="#" onclick="showPage('about')">About</a></li>
-<li><a href="#" onclick="showPage('contact')">Contact</a></li>
+<li><a onclick="showPage('home')">Home</a></li>
+<li><a onclick="showPage('practices')">Practices</a></li>
+<li><a onclick="showPage('gallery')">Gallery</a></li>
+<li><a onclick="showPage('about')">About</a></li>
+<li><a onclick="showPage('contact')">Contact</a></li>
+<li><a onclick="showPage('contactform')">Contact Form</a></li>
 </ul>
 </nav>
 
@@ -243,10 +274,7 @@ protects biodiversity, and produces healthy food naturally.</p>
 <section id="about">
 <h2>About Natural Farming</h2>
 <div class="content-box">
-Natural Farming is a sustainable and eco-friendly method of agriculture that avoids the use of chemical fertilizers, pesticides, and synthetic inputs. It focuses on working with nature rather than against it. The main aim of natural farming is to maintain soil fertility, protect biodiversity, and produce healthy food in a cost-effective way.
-Unlike conventional farming, natural farming depends on organic inputs such as compost, cow dung, cow urine, green manure, crop residues, and natural microbial cultures. These inputs improve soil structure and enhance microbial activity, which increases long-term productivity.
-Natural farming promotes techniques such as crop rotation, mulching, mixed cropping, composting, and natural pest control. These methods help in reducing farming costs, conserving water, and maintaining ecological balance.
-This farming system not only benefits farmers economically but also protects consumers by providing chemical-free and nutritious food. It is considered a long-term solution for sustainable agriculture and environmental protection.
+Natural Farming is a sustainable and eco-friendly method of agriculture that avoids the use of chemical fertilizers, pesticides, and synthetic inputs. It focuses on working with nature rather than against it.
 </div>
 </section>
 
@@ -257,6 +285,19 @@ This farming system not only benefits farmers economically but also protects con
 Email: sksanthosh0950@gmail.com<br><br>
 Phone: +91 6379790950<br><br>
 Address: Happy Farms, Coimbatore
+</div>
+</section>
+
+<!-- NEW CONTACT FORM PAGE -->
+<section id="contactform">
+<h2>Send Us a Message</h2>
+<div class="content-box">
+<form onsubmit="event.preventDefault(); alert('Message Sent Successfully!');">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message" required></textarea>
+<button type="submit">Submit</button>
+</form>
 </div>
 </section>
 
