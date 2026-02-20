@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natural Farming</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f0fff0;
+color:#222;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#0b3d0b;
+padding:15px 0;
+z-index:1000;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+list-style:none;
+}
+
+nav ul li{
+margin:8px 18px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+cursor:pointer;
+}
+
+nav ul li a:hover{
+color:#90ff90;
+}
+
+/* SECTIONS */
+section{
+display:none;
+min-height:100vh;
+padding:120px 8% 60px;
+animation:fade 0.4s ease;
+}
+
+section.active{
+display:block;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* HOME */
+#home.active{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+background:linear-gradient(rgba(0,50,0,0.6),rgba(0,50,0,0.6)),
+url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;
+}
+
+#home h1{
+font-size:42px;
+margin-bottom:20px;
+}
+
+#home p{
+max-width:650px;
+font-size:18px;
+line-height:1.6;
+}
+
+/* HEADINGS */
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#0b3d0b;
+font-size:32px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:15px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+aspect-ratio:3/4;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+/* CONTENT BOX */
+.content-box{
+max-width:800px;
+margin:20px auto;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+line-height:1.7;
+}
+
+/* FORM */
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:20px;
+}
+
+form input, form textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+}
+
+form button{
+padding:12px;
+border:none;
+border-radius:8px;
+background:#0b3d0b;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+form button:hover{
+background:#145214;
+}
+
+/* FOOTER */
+footer{
+background:#0b3d0b;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+#home h1{font-size:28px;}
+h2{font-size:24px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a onclick="showPage('home')">Home</a></li>
+<li><a onclick="showPage('practices')">Practices</a></li>
+<li><a onclick="showPage('gallery')">Gallery</a></li>
+<li><a onclick="showPage('about')">About</a></li>
+<li><a onclick="showPage('contact')">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active">
+<h1>Welcome to Natural Farming</h1>
+<p>Natural farming promotes chemical-free agriculture, improves soil fertility,
+protects biodiversity, and produces healthy food naturally.</p>
+</section>
+
+<!-- PRACTICES -->
+<section id="practices">
+<h2>Natural Farming Practices</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589927986089-35812388d1e4?auto=format&fit=crop&w=600&q=60">
+<h3>Composting</h3>
+<p>Organic waste improves soil fertility naturally.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=600&q=60">
+<h3>Crop Rotation</h3>
+<p>Prevents soil nutrient loss and controls pests.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=60">
+<h3>Natural Pest Control</h3>
+<p>Neem solutions protect crops naturally.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=600&q=60">
+<h3>Mulching</h3>
+<p>Conserves moisture and reduces weeds.</p>
+</div>
+
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<h2>Gallery</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=600&q=60">
+<h3>Organic Vegetables</h3>
+<p>Potato, Tomato, Onion, Garlic, Ginger, Green Chilli, Lemon</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=600&q=60">
+<h3>Green Fields</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=60">
+<h3>Healthy Crops</h3>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1598514982695-5b2f7a9b1e4e?auto=format&fit=crop&w=600&q=60">
+<h3>Sustainable Irrigation</h3>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About Natural Farming</h2>
+<div class="content-box">
+Natural Farming is a sustainable and eco-friendly agriculture method that avoids chemical fertilizers and pesticides. It works in harmony with nature to produce healthy food.
+</div>
+</section>
+
+<!-- CONTACT (Contact + Form in ONE page) -->
+<section id="contact">
+<h2>Contact Us</h2>
+
+<div class="content-box">
+Email: sksanthosh0950@gmail.com<br><br>
+Phone: +91 6379790950<br><br>
+Address: Happy Farms, Coimbatore
+</div>
+
+<div class="content-box">
+<h2>Send Us a Message</h2>
+
+<form action="https://formsubmit.co/sksanthosh0950@gmail.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</div>
+</section>
+
+<footer>
+© 2026 Natural Farming | All Rights Reserved
+</footer>
+
+<script>
+function showPage(pageId){
+let sections=document.querySelectorAll("section");
+sections.forEach(section=>section.classList.remove("active"));
+document.getElementById(pageId).classList.add("active");
+window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
