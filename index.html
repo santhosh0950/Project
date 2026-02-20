@@ -70,8 +70,8 @@ from{opacity:0;}
 to{opacity:1;}
 }
 
-/* HOME */
-#home.active{
+/* HOME & ABOUT */
+#homeAbout.active{
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -82,15 +82,16 @@ background:linear-gradient(rgba(0,50,0,0.6),rgba(0,50,0,0.6)),
 url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;
 }
 
-#home h1{
+#homeAbout h1{
 font-size:42px;
 margin-bottom:20px;
 }
 
-#home p{
-max-width:650px;
+#homeAbout p{
+max-width:750px;
 font-size:18px;
-line-height:1.6;
+line-height:1.7;
+margin-bottom:20px;
 }
 
 /* HEADINGS */
@@ -181,7 +182,7 @@ padding:15px;
 
 /* MOBILE */
 @media(max-width:600px){
-#home h1{font-size:28px;}
+#homeAbout h1{font-size:28px;}
 h2{font-size:24px;}
 }
 </style>  
@@ -191,25 +192,34 @@ h2{font-size:24px;}
 
 <nav>  
 <ul>  
-<li><a onclick="showPage('home')">Home</a></li>  
+<li><a onclick="showPage('homeAbout')">Home & About</a></li>  
 <li><a onclick="showPage('practices')">Practices</a></li>  
 <li><a onclick="showPage('gallery')">Gallery</a></li>  
-<li><a onclick="showPage('about')">About</a></li>  
 <li><a onclick="showPage('contact')">Contact</a></li>  
 </ul>  
 </nav>  
 
-<!-- HOME -->  
-<section id="home" class="active">  
+<!-- HOME & ABOUT -->  
+<section id="homeAbout" class="active">  
 <h1>Welcome to Natural Farming</h1>  
-<p>Natural farming promotes chemical-free agriculture, improves soil fertility,
-protects biodiversity, and produces healthy food naturally.</p>  
+<p>
+Natural farming promotes chemical-free agriculture, improves soil fertility,
+protects biodiversity, and produces healthy food naturally.
+</p>
+
+<p>
+Natural Farming is a sustainable and eco-friendly agriculture method that avoids
+chemical fertilizers and pesticides. It enhances soil fertility using compost,
+mulching, crop rotation, and natural pest control techniques while protecting
+the environment for future generations.
+</p>
 </section>  
 
 <!-- PRACTICES -->  
 <section id="practices">  
 <h2>Natural Farming Practices</h2>  
 <div class="grid">  
+
 <div class="card">  
 <img src="fir.jpg">  
 <h3>Composting</h3>  
@@ -233,10 +243,11 @@ protects biodiversity, and produces healthy food naturally.</p>
 <h3>Mulching</h3>  
 <p>Conserves moisture and reduces weeds.</p>  
 </div>  
+
 </div>  
 </section>  
 
-<!-- GALLERY (Exactly 4 Images - No Changes) -->  
+<!-- GALLERY (4 Images Only) -->  
 <section id="gallery">  
 <h2>Gallery</h2>  
 <div class="grid">  
@@ -262,14 +273,6 @@ protects biodiversity, and produces healthy food naturally.</p>
 <h3>Sustainable Irrigation</h3>  
 </div>  
 
-</div>  
-</section>  
-
-<!-- ABOUT -->  
-<section id="about">  
-<h2>About Natural Farming</h2>  
-<div class="content-box">  
-Natural Farming is a sustainable and eco-friendly agriculture method that avoids chemical fertilizers and pesticides.  
 </div>  
 </section>  
 
