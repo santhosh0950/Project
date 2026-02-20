@@ -218,14 +218,13 @@ h2{font-size:24px;}
 
 <nav>
 <div class="logo">
-<img src="logo.jpeg" alt="Organic Farm Logo">
+<img src="logo.png" alt="Organic Farm Logo">
 <span>Natural Farming</span>
 </div>
 
 <ul>
 <li><a onclick="showPage('homeAbout')">Home & About</a></li>
 <li><a onclick="showPage('practices')">Practices</a></li>
-<li><a onclick="showPage('gallery')">Gallery</a></li>
 <li><a onclick="showPage('contact')">Contact</a></li>
 </ul>
 </nav>
@@ -249,6 +248,7 @@ the environment for future generations.
 <section id="practices">
 <h2>Natural Farming Practices</h2>
 <div class="grid">
+
 <div class="card">
 <img src="https://images.unsplash.com/photo-1598515213692-0d1f6d3b6f3a?auto=format&fit=crop&w=600&q=60">
 <h3>Composting</h3>
@@ -272,17 +272,32 @@ the environment for future generations.
 <h3>Mulching</h3>
 <p>Conserves moisture and reduces weeds.</p>
 </div>
+
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact Us</h2>
+
+<!-- CONTACT FORM (NOW ON TOP) -->
 <div class="content-box">
-Email: sksanthosh0950@gmail.com<br><br>
-Phone: +91 6379790950<br><br>
-Address: Happy Farms, Coimbatore
+<h3>Send Us a Message</h3>
+<form onsubmit="submitForm(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message" required></textarea>
+<button type="submit">Submit</button>
+</form>
 </div>
+
+<!-- CONTACT DETAILS (NOW BELOW FORM) -->
+<div class="content-box">
+<strong>Email:</strong> sksanthosh0950@gmail.com<br><br>
+<strong>Phone:</strong> +91 6379790950<br><br>
+<strong>Address:</strong> Happy Farms, Coimbatore
+</div>
+
 </section>
 
 <footer>
@@ -295,6 +310,11 @@ let sections=document.querySelectorAll("section");
 sections.forEach(section=>section.classList.remove("active"));
 document.getElementById(pageId).classList.add("active");
 window.scrollTo(0,0);
+}
+
+function submitForm(event){
+event.preventDefault();
+alert("Thank you! Your message has been submitted successfully.");
 }
 </script>
 
